@@ -2,6 +2,7 @@ public class testClass {
 	public String URL {get; set;}
 
 	public testClass() {
+		//Another comment to generate Conflict
 		string domain=System.URL.getSalesforceBaseURL().getHost();
 		list<string>DomainList=domain.split('\\.',0);
 		string newDomein=DomainList[0];
