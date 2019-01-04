@@ -1,0 +1,11 @@
+<apex:page >
+    
+    <apex:includeScript value="{! $Resource.jQuery}" />
+    
+    <script type = "text/javascript">
+    	$(document).ready(function(){
+        	window.alert("Jquery has been loaded");
+        });
+    </script>
+    <h1>Static Resource Test</h1>
+</apex:page>

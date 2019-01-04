@@ -1,0 +1,86 @@
+<apex:page controller="testJSRemotingFileUploadController" >
+    <script>
+    function uploadFile() {
+        //Getting the uploaded file
+        var file = document.getElementById('fileUpload').files[0];
+        if (file != undefined){
+        	if (file.size > 685259){
+                alert('Maximum file size: 3Mb');
+            	return null;
+            }
+            convertFiletoString(file);
+        } else {
+        	alert('Please choose a file to upload');
+        }
+        //making a call to contoller method
+        
+        /*testJSRemotingFileUploadController.testUpload(
+            'Himansh',
+            function(result, event){
+                alert(result);
+            }
+        );*/
+        return false;
+    }
+    
+    function convertFiletoString(file) {
+    	var reader = new FileReader();
+        reader.addEventListener('load', function() {sendToController(reader, file.name, file.type);});
+        reader.addEventListener('error', function() {alert('There was some issue in uploading the file. Please contact Admin.')});
+        reader.readAsBinaryString(file);
+    }
+        
+    function sendToController(fileReader, fileName, fileType) {
+        //alert('File Read Success!!');
+        //alert(fileReader.result);
+        var attachdImg = window.btoa(fileReader.result);
+        //debugger;
+        //Calling the controller function to upload file.
+        testJSRemotingFileUploadController.testUpload(attachdImg,fileName,fileType,
+                                                      function(result, event) {
+                                                          alert('reply recieved');
+                                                          console.log('event_type: ' + event.type);
+                                                          if (event.type == 'exception'){
+                                                          	alert('An Error has occured while uploading the documents: ' + event.message);
+                                                          }
+                                                          
+                                                          
+                                                      });
+    }
+    
+    function uploadFileFunc() {
+        var reader = new FileReader();
+        var StrFile = '';
+        var file = document.getElementById('fileUpload').files[0];
+        reader.addEventListener('load', function() {StrFile = window.btoa(reader.result);alert(StrFile.length);uplaodFunc(StrFile);});
+        //reader.addEventListener('error', function() {alert('There was some issue in uploading the file. Please contact Admin.');return false;});
+        reader.readAsBinaryString(file);
+        return false;
+    }
+    </script>
+    <body>
+        <apex:form id="frm" >
+        <apex:actionFunction name="uplaodFunc" action="{!uploadFiles}" immediate="true">
+        	<apex:param name="fileStr" assignTo="{!strImage}"  value="" />
+        </apex:actionFunction>
+        </apex:form>
+        <form>
+            <div>
+                <input type="file" id="fileUpload"/>
+                <button onclick="return uploadFileFunc();">Submit</button>
+            </div>
+        </form>
+        <apex:pageBlock id="pblock">
+        	
+            <apex:pageBlockSection id="pbSec">
+            
+                <apex:form id="theFrm">
+                    <div>
+                        <apex:image id="theImage" value="/servlet/servlet.FileDownload?file={!image.id}" />
+                        <apex:commandButton value="Reload Image" id="reloadBtn" action="{!reloadImage}" reRender="theFrm,pblock,pbSec,theImage" />
+                    </div>
+                </apex:form>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </body>
+</apex:page>

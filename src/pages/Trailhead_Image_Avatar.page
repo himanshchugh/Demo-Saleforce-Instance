@@ -1,0 +1,5 @@
+<apex:page >
+    <span class="slds-avatar slds-avatar--x-small">
+  <img src="/assets/images/avatar1.jpg" alt="meaningful text" />
+</span>
+</apex:page>

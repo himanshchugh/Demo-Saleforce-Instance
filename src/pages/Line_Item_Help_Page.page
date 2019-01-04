@@ -1,0 +1,6 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Line Item</h1>
+  <p>A line item represents a line in an invoice. It contains details about the single merchandise purchased, like Name, price, quantity.</p>
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

@@ -1,0 +1,18 @@
+{
+    "projectName": "Demo_Org",
+    "username": "himansh@nagarro.com",
+    "id": "c4784780-2c21-11e8-97ba-6dee824c60ff",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://himanshlearningforce-dev-ed.my.salesforce.com",
+    "workspace": "C:\\Users\\himansh\\Documents",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "AuraDefinitionBundle",
+        "StaticResource"
+    ]
+}

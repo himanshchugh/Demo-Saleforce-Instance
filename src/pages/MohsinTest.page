@@ -1,0 +1,64 @@
+<apex:page controller="MohsinTest" readOnly="false">
+    <apex:includescript value="{!URLFOR($Resource.Jas, 'jaS/jquery-1.11.1.min.js')}" />
+    <script>
+    $(document).ready(function(){ 
+        $('#addPop').click(function() {
+            if ($('#distriList option:selected').val() != null) {
+                $('#distriList option:selected').remove().appendTo('#selectDistriList');
+                $("#distriList").attr('selectedIndex','-1').find("option:selected").removeAttr("selected");
+                $("#selectDistriList").attr('selectedIndex', '-1').find("option:selected").removeAttr("selected");
+            } else {
+                alert("Before add please select any position.");
+            }
+        });
+        
+        $('#removePop').click(function() {if ($('#selectDistriList option:selected').val() != null) {
+            $('#selectDistriList option:selected').remove().appendTo('#distriList');
+            $("#selectDistriList").attr('selectedIndex', '-1').find("option:selected").removeAttr("selected");
+            $("#distriList").attr('selectedIndex', '-1').find("option:selected").removeAttr("selected");
+            $("#distriList").attr('selectedIndex', '-1').addAttr("selected");
+        } else {
+            alert("Before remove please select any position.");
+        }
+                                         });
+    });
+    
+    function getValues()
+    {
+        var selectedList = document.getElementById('selectDistriList');
+        var str='';
+        for(var i = 0; i<selectedList.options.length;i++)
+        {
+            if(str != '')
+            {
+            	str = str+';'+ selectedList.options[i].value;
+            }
+            else
+            {
+                str = str+selectedList.options[i].value;
+            }
+        }
+        debugger;
+        saveAll(str);
+    }
+    </script>
+    
+    <apex:form >
+        <apex:actionFunction action="{!onSave}" name="saveAll">
+            <apex:param name="multiselectvalues" value="" />
+        </apex:actionFunction>
+        <select id="distriList" name="distriList" multiple="multiple" style="width: 150px; height: 70px; margin: 0px 2px 0px 3px;">
+            <apex:repeat value="{!option1}" var="opt1">
+                <option value="{!opt1}">{!opt1}</option>
+            </apex:repeat>
+        </select>
+        <a href="javascript:void(0);" id="addPop">Add</a>
+        <a href="javascript:void(0);" id="removePop">Remove</a>
+        <select id="selectDistriList" name="selectDistriList" multiple="multiple" style="width: 150px; height: 70px; margin: 0px 2px 0px 3px;">
+            <apex:repeat value="{!option2}" var="opt2">
+                <option value="{!opt2}">{!opt2}</option>
+            </apex:repeat>
+        </select>
+        <apex:commandButton onclick="getValues();" value="Save"/>
+    </apex:form>
+</apex:page>

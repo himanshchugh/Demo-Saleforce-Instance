@@ -1,0 +1,17 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="true">
+    <h1>Hello World</h1>
+    <p>This is my first VisualForce Page</p>
+    
+    <apex:pageBlock title="A Block"> 
+    	<apex:pageBlockSection title="Name" columns="1">
+            <p>{! $User.FirstName & ' ' & $User.LastName}</p>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Username">
+            <p>{! $User.Username}</p>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Phone Number">
+            <p>{! IF(ISNULL($User.Phone), 'Phone Number is not available.' , $User.Phone) }</p>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <h3><i>This is the begining of something new...</i></h3>
+</apex:page>

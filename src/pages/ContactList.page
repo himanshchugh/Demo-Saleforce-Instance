@@ -1,0 +1,11 @@
+<apex:page standardController="Lead" recordSetVar="leads" >
+   <apex:form >
+    <apex:pageBlock title="All Leads">
+    <apex:pageBlockTable value="{!leads}" var="lead" >
+        <apex:inputCheckbox />
+        <apex:column value="{!lead.FirstName}" />
+        <apex:column value="{! lead.Company}" />
+    </apex:pageBlockTable>
+    </apex:pageBlock>
+    </apex:form>   
+</apex:page>

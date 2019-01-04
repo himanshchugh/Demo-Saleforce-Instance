@@ -1,0 +1,121 @@
+42.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: /*List<testJSRemotingFileUploadController.test_Wrapper> wrappers = new List<testJSRemotingFileUploadController.test_Wrapper>();
+Execute Anonymous: testJSRemotingFileUploadController.test_Wrapper wrapper = new testJSRemotingFileUploadController.test_Wrapper();
+Execute Anonymous: wrapper.testField = 'abc';
+Execute Anonymous: wrappers.add(wrapper);*/
+Execute Anonymous: 
+Execute Anonymous: /*AccountToLeadConveterController batchTest = new AccountToLeadConveterController();
+Execute Anonymous: Database.executeBatch(batchTest);*/
+Execute Anonymous: 
+Execute Anonymous: //###Code to Generate Random Strings###//
+Execute Anonymous: /*Integer[] alphs= new Integer[26];
+Execute Anonymous: //Populate char array
+Execute Anonymous: for (Integer i=0; i<26;i++){
+Execute Anonymous:     alphs[i] = i+65;
+Execute Anonymous: }
+Execute Anonymous: //Generating a random string
+Execute Anonymous: List<String> randomStrs = new List<String>();
+Execute Anonymous: for (Integer count=0; count<100;count++){
+Execute Anonymous:     List<Integer> randomChars = new List<Integer>();
+Execute Anonymous:     randomChars.clear();
+Execute Anonymous:     for (Integer i=0; i<5;i++){
+Execute Anonymous:         randomChars.add(alphs[Math.mod((Integer)(Math.Random()*100),26)]);
+Execute Anonymous:     }
+Execute Anonymous:     System.debug(String.fromCharArray(randomChars));
+Execute Anonymous:     randomStrs.add(String.fromCharArray(randomChars));
+Execute Anonymous: }*/
+Execute Anonymous: 
+Execute Anonymous: /*//###Code to calculte frequency of Random Output###//
+Execute Anonymous: List<Double> rndms = new List<Double>();
+Execute Anonymous: Integer numOfNums = 100; //Number of random numbs to be generated
+Execute Anonymous: Integer maxRange = 100; //Number by which the random numbers will be multiplied
+Execute Anonymous: Integer intrvalSize = 10;//This number represents the size of the intervals in the final frequency distribution
+Execute Anonymous: //Generating random numbers
+Execute Anonymous: for(Integer i=0;i<numOfNums;i++){
+Execute Anonymous:     rndms.add(Math.random()*100);
+Execute Anonymous:     //System.debug(rndms.get(rndms.size()-1));
+Execute Anonymous: }
+Execute Anonymous: List<Integer> ranges = new List<Integer>();
+Execute Anonymous: //Calculating ranges
+Execute Anonymous: for (Integer i=0; i<=maxRange;i+=intrvalSize){
+Execute Anonymous:    	ranges.add(i);
+Execute Anonymous: }
+Execute Anonymous: System.debug(ranges);
+Execute Anonymous: //Calculating frequency*/
+Execute Anonymous: 
+Execute Anonymous: testClass2 tc2 = new testClass2();
+15:54:16.1 (1119940)|USER_INFO|[EXTERNAL]|005280000030kgN|himansh@nagarro.com|India Standard Time|GMT+05:30
+15:54:16.1 (1268721)|EXECUTION_STARTED
+15:54:16.1 (1273270)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+15:54:16.1 (11848808)|VARIABLE_SCOPE_BEGIN|[45]|tc2|testClass2|true|false
+15:54:16.1 (12066781)|HEAP_ALLOCATE|[72]|Bytes:3
+15:54:16.1 (12104368)|HEAP_ALLOCATE|[77]|Bytes:152
+15:54:16.1 (12115146)|HEAP_ALLOCATE|[342]|Bytes:408
+15:54:16.1 (12126040)|HEAP_ALLOCATE|[355]|Bytes:408
+15:54:16.1 (12136509)|HEAP_ALLOCATE|[467]|Bytes:48
+15:54:16.1 (12183515)|HEAP_ALLOCATE|[139]|Bytes:6
+15:54:16.1 (12199537)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:2
+15:54:16.1 (12235616)|STATEMENT_EXECUTE|[1]
+15:54:16.1 (12238300)|STATEMENT_EXECUTE|[45]
+15:54:16.1 (12242389)|HEAP_ALLOCATE|[45]|Bytes:1
+15:54:16.1 (12281627)|METHOD_ENTRY|[1]|01p0I00000FiPXz|testClass2.testClass2()
+15:54:16.1 (12288864)|STATEMENT_EXECUTE|[1]
+15:54:16.1 (12291920)|STATEMENT_EXECUTE|[1]
+15:54:16.1 (12316969)|HEAP_ALLOCATE|[50]|Bytes:5
+15:54:16.1 (12332707)|HEAP_ALLOCATE|[56]|Bytes:5
+15:54:16.1 (12339382)|HEAP_ALLOCATE|[64]|Bytes:7
+15:54:16.1 (12359322)|SYSTEM_MODE_ENTER|false
+15:54:16.1 (12372603)|HEAP_ALLOCATE|[45]|Bytes:5
+15:54:16.1 (12378934)|SYSTEM_MODE_EXIT|false
+15:54:16.1 (12398354)|METHOD_EXIT|[1]|testClass2
+15:54:16.1 (12412560)|HEAP_ALLOCATE|[45]|Bytes:4
+15:54:16.1 (12436872)|SYSTEM_MODE_ENTER|false
+15:54:16.1 (12452600)|HEAP_ALLOCATE|[45]|Bytes:5
+15:54:16.1 (12478318)|CONSTRUCTOR_ENTRY|[45]|01p0I00000FiPXz|<init>()
+15:54:16.1 (12508080)|VARIABLE_SCOPE_BEGIN|[4]|this|testClass2|true|false
+15:54:16.1 (12559315)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x3932907e
+15:54:16.1 (12574887)|HEAP_ALLOCATE|[5]|Bytes:5
+15:54:16.1 (12579266)|STATEMENT_EXECUTE|[1]
+15:54:16.1 (12583821)|HEAP_ALLOCATE|[5]|Bytes:5
+15:54:16.1 (12591872)|HEAP_ALLOCATE|[5]|Bytes:6
+15:54:16.1 (12620854)|STATEMENT_EXECUTE|[4]
+15:54:16.1 (12622645)|STATEMENT_EXECUTE|[5]
+15:54:16.1 (18894068)|HEAP_ALLOCATE|[5]|Bytes:104
+15:54:16.1 (18906339)|HEAP_ALLOCATE|[5]|Bytes:3
+15:54:16.1 (18919024)|HEAP_ALLOCATE|[5]|Bytes:12
+15:54:16.1 (18933765)|CONSTRUCTOR_ENTRY|[5]|01p28000009r8Az|<init>()
+15:54:16.1 (18970851)|VARIABLE_SCOPE_BEGIN|[4]|this|testClass.testInnerClass|true|false
+15:54:16.1 (19003819)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x40716d1d
+15:54:16.1 (19025624)|STATEMENT_EXECUTE|[4]
+15:54:16.1 (19027708)|STATEMENT_EXECUTE|[6]
+15:54:16.1 (19029331)|STATEMENT_EXECUTE|[7]
+15:54:16.1 (19055436)|CONSTRUCTOR_EXIT|[5]|01p28000009r8Az|<init>()
+15:54:16.1 (19067128)|VARIABLE_SCOPE_BEGIN|[5]|innerObj|testClass.testInnerClass|true|false
+15:54:16.1 (19083911)|VARIABLE_ASSIGNMENT|[5]|innerObj|{}|0x40716d1d
+15:54:16.1 (19089583)|STATEMENT_EXECUTE|[6]
+15:54:16.1 (19092962)|HEAP_ALLOCATE|[6]|Bytes:3
+15:54:16.1 (19156309)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x40716d1d
+15:54:16.1 (19171240)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"abc"
+15:54:16.1 (19182301)|VARIABLE_ASSIGNMENT|[6]|this.testProp1|"abc"|0x40716d1d
+15:54:16.1 (19214593)|CONSTRUCTOR_EXIT|[45]|01p0I00000FiPXz|<init>()
+15:54:16.1 (19227004)|SYSTEM_MODE_EXIT|false
+15:54:16.1 (19264019)|VARIABLE_ASSIGNMENT|[45]|tc2|{}|0x3932907e
+15:54:16.19 (19304607)|CUMULATIVE_LIMIT_USAGE
+15:54:16.19 (19304607)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+15:54:16.19 (19304607)|CUMULATIVE_LIMIT_USAGE_END
+
+15:54:16.1 (19337918)|CODE_UNIT_FINISHED|execute_anonymous_apex
+15:54:16.1 (20529827)|EXECUTION_FINISHED
