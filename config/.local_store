@@ -4578,15 +4578,17 @@
         "mmState": "clean"
     },
     "testClass.cls": {
-        "createdById": "005280000030kgNAAQ",
-        "createdByName": "Himansh Chugh",
-        "createdDate": "2016-08-10T06:45:27.000Z",
-        "fileName": "unpackaged/classes/testClass.cls",
-        "fullName": "testClass",
         "id": "01p28000009r8AzAAI",
+        "name": "testClass",
+        "createdDate": "2016-08-10T06:45:27.000+0000",
+        "createdById": "005280000030kgNAAQ",
+        "namespacePrefix": null,
         "lastModifiedById": "005280000030kgNAAQ",
+        "lastModifiedDate": "2019-01-04T10:43:19.000+0000",
+        "fullName": "testClass",
+        "fileName": "unpackaged/classes/testClass.cls",
+        "createdByName": "Himansh Chugh",
         "lastModifiedByName": "Himansh Chugh",
-        "lastModifiedDate": "2018-06-05T07:42:51.000Z",
         "manageableState": "unmanaged",
         "type": "ApexClass",
         "mmState": "clean"
