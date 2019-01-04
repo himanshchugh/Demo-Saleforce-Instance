@@ -35,15 +35,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "src/classes/TestServiceHandler.cls",
-			"settings":
-			{
-				"buffer_size": 343,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -86,12 +77,16 @@
 	},
 	"expanded_folders":
 	[
-		"/D/MavensMate_Workspace/Demo_Org",
-		"/D/MavensMate_Workspace/Demo_Org/debug",
-		"/D/MavensMate_Workspace/Demo_Org/debug/logs"
+		"/D/MavensMate_Workspace/Demo_Org"
 	],
 	"file_history":
 	[
+		"/D/MavensMate_Workspace/Demo_Org/src/aura/testApp/testApp.app",
+		"/D/MavensMate_Workspace/Demo_Org/src/aura/testComponent/testComponent.auradoc",
+		"/D/MavensMate_Workspace/Demo_Org/src/aura/testComponent/testComponent.cmp",
+		"/D/MavensMate_Workspace/Demo_Org/src/aura/testComp/testComp.cmp",
+		"/D/MavensMate_Workspace/Demo_Org/src/aura/testApp/testApp.app-meta.xml",
+		"/D/MavensMate_Workspace/Demo_Org/src/classes/TestServiceHandler.cls",
 		"/D/MavensMate_Workspace/Demo_Org/src/pages/testPage.page",
 		"/D/MavensMate_Workspace/Demo_Org/src/aura/campingListItem/campingListItem.cmp",
 		"/D/MavensMate_Workspace/Demo_Org/src/aura/campingList/campingList.cmp",
@@ -102,9 +97,7 @@
 		"/D/MavensMate_Workspace/Demo_Org/src/classes/testClass2.cls",
 		"/C/Users/himansh/Desktop/python/finding_prime.py",
 		"/C/Users/himansh/Downloads/apex-07L46000006huv3EAA.log",
-		"/D/MavensMate_Workspace/Demo_Org/src/aura/testComp/testComp.cmp",
 		"/D/MavensMate_Workspace/Demo_Org/src/aura/campingList/campingListController.js",
-		"/D/MavensMate_Workspace/Demo_Org/src/aura/testApp/testApp.app",
 		"/D/MavensMate_Workspace/Demo_Org/src/aura/testComp/testCompController.js",
 		"/D/MavensMate_Workspace/Demo_Org/src/aura/campingListItem/campingListItemController.js",
 		"/D/MavensMate_Workspace/Demo_Org/config/.lightning",
@@ -185,38 +178,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "src/classes/TestServiceHandler.cls",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 343,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								343,
-								343
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/MavensMate/sublime/lang/Apex.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
