@@ -1,0 +1,12 @@
+<aura:component>
+	<aura:attribute name="listOfNames" type="String[]" required='true'/>
+	<aura:attribute name="listOfHeights" type="Decimal[]"/>
+	<aura:attribute name="greetingMsg" type = "String" />
+
+	<h1>{!v.greetingMsg}</h1>
+	<!-- Creating a button which will generate the table on the controller side. -->
+	<lightning:button label="Generate Table" onclick="{!c.populateTable}" />
+
+	<table aura:id="tableOfHeights">
+	</table>
+</aura:component>
