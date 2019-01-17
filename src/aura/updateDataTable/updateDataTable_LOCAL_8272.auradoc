@@ -1,6 +1,0 @@
-<aura:documentation>
-	<aura:description>A component which generates a table from the employee height data passed to the controller.</aura:description>
-	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
-		Example Description
-	</aura:example>
-</aura:documentation>
