@@ -36,5 +36,15 @@
 			//appending the row to table
 			table.appendChild(tbleRowElem);
 		}
+
+		//Adding SLDS table classes to the table if there is data present.
+		if (listOfNames.length > 0){
+			table.classList.add('slds-table_bordered');
+			table.classList.add('slds-resizable');
+
+		}
+
+		//Disabling Button
+		event.getSource().set('v.disabled', 'true');
 	}
 })

@@ -1,3 +1,3 @@
 <aura:application extends="force:slds">
-    <c:testComponent listOfNames= "['himansh', 'tarun']" />
+    <c:updateDataTable listOfNames= "['himansh', 'tarun', 'Dangi', 'Puneet', 'Mohsin']" />
 </aura:application>

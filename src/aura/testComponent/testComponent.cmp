@@ -1,16 +1,6 @@
-<aura:component>
+<aura:component >
 	<aura:attribute name="listOfNames" type="String[]"/>
 	<aura:attribute name="listOfHeights" type="Decimal[]"/>
 	
-	<table>
-		<tr>
-			<th>Name</th><th>Height(ft)</th>
-		</tr>
-
-		<aura:iteration items="{!v.listOfNames}" var="name">
-			<tr>
-				<td>{!name}</td>
-			</tr>
-		</aura:iteration>
-	</table>
+    <lightning:button label = 'Click Me!!' onclick='{!c.myAction}'/>
 </aura:component>
