@@ -4,8 +4,13 @@
 	<aura:attribute name="greetingMsg" type = "String" />
 
 	<!-- Adding SLDS style to components -->
+	<!-- Adding SLDS layput -->
 	<lightning:button label="Generate Table" onclick="{!c.populateTable}" />
-	<h1 class="slds-text-heading--label">{!v.greetingMsg}</h1>
+	<lightning:layout class="slds-page-header slds-page-header_object-home">
+		<lightning:layoutItem class="slds-page-header__col_title">
+			<h1 class="slds-text-heading--label">{!v.greetingMsg}</h1>
+		</lightning:layoutItem>
+	</lightning:layout>
 	<!-- Creating a button which will generate the table on the controller side. -->
 
 	<table class = "slds-table" aura:id="tableOfHeights">
