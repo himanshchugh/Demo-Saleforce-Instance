@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelpPage>Line_Item_Help_Page</customHelpPage>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>It refers to a line in the invoice</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Discounted_Price__c</fullName>
+        <description>The price of a unit of an item.</description>
+        <externalId>false</externalId>
+        <label>Discounted Price</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Invoice__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoice</label>
+        <referenceTo>Invoice__c</referenceTo>
+        <relationshipLabel>Liine Items</relationshipLabel>
+        <relationshipName>Liine_Items</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Merchandise__c</fullName>
+        <externalId>false</externalId>
+        <label>Merchandise</label>
+        <referenceTo>Merchandise__c</referenceTo>
+        <relationshipLabel>Liine Items</relationshipLabel>
+        <relationshipName>Liine_Items</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <description>The quantity of a particular merchandise.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>It tells about the quantity of the merchandise used.</inlineHelpText>
+        <label>Quantity</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Price__c</fullName>
+        <description>The total price of the item purchased</description>
+        <externalId>false</externalId>
+        <formula>Quantity__c * Discounted_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Unit_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Unit Price</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Line Item</label>
+    <nameField>
+        <label>Line Item Number</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Liine Items</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>No_Invalid_Quantities</fullName>
+        <active>true</active>
+        <description>This rules restricts the order of invalid quantities, which is either less than 0 or more than available.</description>
+        <errorConditionFormula>(Quantity__c &lt;= 0) ||
+(Quantity__c &gt;= Merchandise__r.Quantity__c)</errorConditionFormula>
+        <errorDisplayField>Quantity__c</errorDisplayField>
+        <errorMessage>Order should not be more than available or less than one.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Add_a_line_Item_and_update</fullName>
+        <availability>online</availability>
+        <description>Add a new line to the Invoice and update the quantity in the warehouse.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Add a line Item and update Stock</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/flow/Add_a_line_to_a_invoice_and_update_stock?vInvoiceId={!Invoice__c.Id}&amp;retURL=/{!Invoice__c.Id}</url>
+    </webLinks>
+</CustomObject>

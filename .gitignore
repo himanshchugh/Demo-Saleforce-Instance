@@ -1,2 +1,9 @@
 #ignore mavensmate config files
 /config
+/.forceCode
+/debug
+/.sfdx
+force.json
+sfdx-project.json
+My_Org.sublime-project
+My_Org.sublime-workspace
