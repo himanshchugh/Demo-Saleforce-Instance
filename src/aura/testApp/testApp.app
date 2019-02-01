@@ -1,3 +1,3 @@
 <aura:application extends="force:slds">
-    <c:updateDataTable listOfNames= "['himansh', 'tarun', 'Dangi', 'Puneet', 'Mohsin']" />
+    <c:camping />
 </aura:application>

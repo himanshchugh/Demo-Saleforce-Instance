@@ -9,20 +9,26 @@
 		}, true);
 
 		if(allFieldsValid){
-			//Get new item using the new expense attribute
-			var newItem = component.get("v.newItem");
-			console.log("New Item:"+component.get("v.newItem"));
-			var allItems =component.get("v.items");
-			allItems.push(newItem);
-			//Setting new Item back to default values
-			newItem = {'sobjectType': 'Camping_Item__c',
-						'Name':'New Item',
-						'Price__c':0,
-						'Quantity__c':0,
-						'Packed__c':false};
-			console.log("Default Item:" + JSON.stringify(newItem));
-			component.set("v.newItem", newItem);
-			component.set("v.items",allItems);
+            //Get new item using the new expense attribute
+            var newItem = component.get("v.newItem");
+            //Calling the helper method to save item to database.
+			helper.createItem(component, newItem);
 		}
+	},
+
+	doInit : function(component) {
+		//Initializing component by loading up existing records from the database.
+		//Creating controller action
+        debugger;
+		var get_action = component.get("c.getItems");
+		get_action.setCallback(this, function(response){
+			if (response.getState() == 'SUCCESS'){
+                component.set('v.items', response.getReturnValue());
+            }
+		});
+
+        //Adding the action to the queue
+        $A.enqueueAction(get_action,true);
+
 	}
 })
