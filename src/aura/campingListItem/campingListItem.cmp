@@ -5,12 +5,21 @@
 							   'Price__c':10,
 							   'Quantity__c':1.0,
 							   'Packed__c':false}"/>
-	<p>Name: {!v.item.Name} </p>
+	<!-- <p>Name: {!v.item.Name} </p>
 	<p>Price: <lightning:formattedNumber value="{!v.item.Price__c}" style="currency"/> </p>
 	<p>Quantity: <lightning:formattedNumber value="{!v.item.Quantity__c}" style="decimal"/> </p>
 	<p><lightning:input type="toggle"                            
                          label="Packed"                           
                          name="packed"                         
                          checked="{!v.item.Packed__c}" /></p>
-    <lightning:button label="Packed!" name="pack_item" onClick="{!c.packItem}" />
+    <lightning:button label="Packed!" name="pack_item" onClick="{!c.packItem}" /> -->
+
+    <lightning:card title="{!v.item.Name}">
+    	<p style="margin-left: 1%;">Price: <lightning:formattedNumber value="{!v.item.Price__c}" style="currency"/> </p>
+		<p style="margin-left: 1%;">Quantity: <lightning:formattedNumber value="{!v.item.Quantity__c}" style="decimal"/> </p>
+		<p style="margin-left: 1%;"><lightning:input type="toggle"                            
+                         label=""                           
+                         name="packed"                         
+                         checked="{!v.item.Packed__c}" messageToggleActive="Packed" messageToggleInactive="Unpacked"/></p>
+    </lightning:card>
 </aura:component>
