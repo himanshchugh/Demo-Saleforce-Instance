@@ -2,9 +2,9 @@
 	createItem  : function(component, newItem) {
 		// console.log("New Item:"+component.get("v.newItem"));
 	    //Creating controller action to push new item to database.
-	    var create_action = component.get('c.saveItem');
-	    create_action.setParam('newItem', newItem);
-	    create_action.setCallback(this, function(response) {
+	    var action = component.get("c.saveItem");
+	    action.setParam('item', newItem);
+	    action.setCallback(this, function(response) {
 	        //If the save to database was a success
 	        if (response.getState() == 'SUCCESS'){
 	            var allItems =component.get("v.items");
@@ -21,6 +21,6 @@
 	            component.set("v.items",allItems);
 	        }
 	    });
-		$A.enqueueAction(create_action, true);
+		$A.enqueueAction(action, true);
 	}
 })

@@ -10,7 +10,7 @@ public with sharing class CampingListController {
 	}
 
 	@AuraEnabled
-	public static void saveItem(Camping_Item__c newItem) {
-		upsert newItem;
+	public static void saveItem(Camping_Item__c item) {
+		upsert item;
 	}
 }

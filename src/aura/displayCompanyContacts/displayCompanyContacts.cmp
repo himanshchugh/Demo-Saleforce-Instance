@@ -1,0 +1,5 @@
+<aura:component controller="ContactClass">
+	<aura:attribute name='cmpany_name' type='String' required ='true' />
+	<aura:attribute name="contact_list" type='Contact[]' />
+	<aura:handler name="init" action="{!c.getContactsOnInit}" value="{!this}"/>
+</aura:component>
